@@ -1,0 +1,167 @@
+//carroms
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int leftoverCoins = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+        char pocketedRed = scanner.nextLine().charAt(0);
+
+        int totalPoints = calculateTotalPoints(leftoverCoins, pocketedRed);
+        if (totalPoints != -1) {
+            System.out.println(totalPoints);
+        } else {
+            System.out.println("Invalid Input");
+        }
+    }
+
+    static int calculateTotalPoints(int leftoverCoins, char pocketedRed) {
+        if (leftoverCoins < 1 || leftoverCoins > 9) {
+            return -1; // Invalid Input
+        }
+
+        int points = leftoverCoins;
+        if (pocketedRed == 'r') {
+            points += 5;
+        }
+
+        return points;
+    }
+}
+
+
+// adjacent
+#include <iostream>
+using namespace std;
+int main()
+{
+     int n, l[50], i, j, s = 0;
+     cin >> n;
+     for (i = 0; i < n; i++)
+         cin >> l[i];
+     for (i = 0; i < n; i += 2)
+     {
+           if (l[i] > l[i + 1])
+               s += l[i + 1];
+           else 
+               s += l[i];
+     }
+     cout << s; 
+     return 0;
+}
+
+//account balance
+#include <stdio.h>
+
+int main() {
+    int withdrawAmount;
+    double accountBalance;
+    scanf("%d %lf", &withdrawAmount, &accountBalance);
+
+    double finalAmount = accountBalance;
+
+    if (withdrawAmount % 5 == 0 && (withdrawAmount + 0.5) <= accountBalance) {
+        finalAmount -= (withdrawAmount + 0.5);
+    }
+
+    printf("%.2lf\n", finalAmount);
+
+    return 0;
+}
+
+//convert to uppercase
+#include <iostream>
+#include <string>
+
+std::string convertToUppercase(const std::string& input) {
+    std::string result;
+    
+    for (char currentChar : input) {
+        if (currentChar >= 'a' && currentChar <= 'z') {
+            // Convert lowercase to uppercase by subtracting 32 from ASCII value
+            char uppercaseChar = static_cast<char>(currentChar - 32);
+            result += uppercaseChar;
+        } else {
+            result += currentChar;
+        }
+    }
+    
+    return result;
+}
+
+int main() {
+    std::string input;
+    std::getline(std::cin, input);
+    
+    std::string result = convertToUppercase(input);
+    std::cout << result << std::endl;
+    
+    return 0;
+}
+
+//find first repeated element
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        
+        int result = findFirstRepeatedElement(arr);
+        if (result != -1) {
+            System.out.println("The first repeating element is " + result);
+        } else {
+            System.out.println("There are no repeating elements");
+        }
+    }
+    
+    static int findFirstRepeatedElement(int[] arr) {
+        HashMap<Integer, Integer> elementCount = new HashMap<>();
+        
+        for (int i = 0; i < arr.length; i++) {
+            if (elementCount.containsKey(arr[i])) {
+                return arr[i]; // Found the first repeated element
+            } else {
+                elementCount.put(arr[i], 1);
+            }
+        }
+        
+        return -1; // No repeated element found
+    }
+}
+
+
+//Mike set off
+
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string input;
+    std::cin >> input;
+
+    int count0 = 0, count1 = 0;
+    for (char digit : input) {
+        if (digit == '0') {
+            count0++;
+        } else {
+            count1++;
+        }
+    }
+
+    if (count0 == 1 || count1 == 1) {
+        std::cout << "Yes" << std::endl;
+    } else {
+        std::cout << "No" << std::endl;
+    }
+
+    return 0;
+}
+

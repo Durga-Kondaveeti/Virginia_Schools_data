@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { Route,BrowserRouter,Routes } from 'react-router-dom';
 import './App.css';
-
+import Maps from "./components/Maps"
+import Data from './components/Data';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+             
+       <BrowserRouter>
+    
+    <Routes>
+    <Route path="/Maps" element={<Maps/>}></Route>
+    <Route path="/" element={<Data/>}></Route>
+    </Routes>
+      </BrowserRouter>
+
+      <footer className="App-footer">
+            <p>© 2023 Virginia Beach Schools. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@vbschools.net">info@vbschools.net</a></p>
+        </footer>
     </div>
   );
 }
