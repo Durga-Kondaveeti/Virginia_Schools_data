@@ -12,6 +12,7 @@
     display: flex;
     object-fit: cover;
     flex-direction: column;
+    width: 100vw;
 }
 
 .search-icon {
@@ -75,11 +76,11 @@ main {
     text-align: center;
     font-size: large; 
     margin-top: 24px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 /*For Mobile */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
     .App-header {
       background-size: 100vmax 60vmax;   
     }
@@ -97,7 +98,7 @@ main {
     }
   .data-container .row{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
   }
     .data-box {
         margin: 10px 10px;
