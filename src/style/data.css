@@ -6,7 +6,7 @@
     rgba(15, 15, 15, 0.60)), url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: 95vmin 10vmin;
-    background-size: 100vmax 40vmax;
+    background-size: 100vmax 60vmax;
     text-align: center;
     min-height: 70vh;
     display: flex;
