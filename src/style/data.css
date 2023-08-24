@@ -78,6 +78,32 @@ main {
     margin-left: 10px;
     margin-right: 10px;
 }
+/*For Mobile */
+@media only screen and (min-width: 600px) {
+    .App-header {
+      background-size: 100vmax 60vmax;   
+    }
+  .data-container .row{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+  }
+    .data-box {
+        margin: 10px 10px !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .App-header {
+      background-size: 100vmax 60vmax;   
+    }
+  .data-container .row{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+    .data-box {
+        margin: 10px 10px;
+    }
+    
+}
 
 .row {
     display: flex;
