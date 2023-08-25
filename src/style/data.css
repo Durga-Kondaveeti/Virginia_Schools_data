@@ -82,7 +82,8 @@ main {
 /*For Mobile */
 @media only screen and (max-width: 600px) {
     .App-header {
-      background-size: 100vmax 60vmax;   
+      background-size: 100vmax 60vmax;  
+      min-height: 60vh; 
     }
   .data-container .row{
       display: grid;
@@ -90,6 +91,9 @@ main {
   }
     .data-box {
         margin: 10px 10px !important;
+    }
+    .data-container{
+        margin-left: 30px !important;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1040px) {
